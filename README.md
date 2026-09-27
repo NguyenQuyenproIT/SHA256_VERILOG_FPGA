@@ -420,10 +420,10 @@ stateDiagram-v2
 ```
 
 ### 7.3. Giao Thức Giao Tiếp UART (Baudrate 115200 @ 27MHz)
-- Tần số xung nhịp: $F{\text{clk}} = 27\,000\,000\text{ Hz}$.
+- Tần số xung nhịp: $F_{\text{clk}} = 27\,000\,000\text{ Hz}$.
 - Tốc độ truyền (Baudrate): $B = 115\,200\text{ bps}$.
 - Hệ số chia xung (Clock Divider):
-  $$\text{CLKS\_PER\_BIT} = \left\lfloor \frac{27\,000\,000}{115\,200} \right\rceil = 234\text{ chu kỳ xung nhịp / 1 bit UART}$$
+  $$\text{CLKS\_PER\_BIT}$$ = $$\left\lfloor \frac{27\,000\,000}{115\,200} \right\rceil = 234\text{ chu kỳ xung nhịp / 1 bit UART}$$
 - Sai số tần số thực tế: $\Delta = \left|\frac{27\,000\,000 / 234 - 115\,200}{115\,200}\right| \approx 0.16\%$ (nằm trong dung sai cho phép $< 2\%$ của chuẩn UART).
 
 ### 7.4. Sơ Đồ Gán Chân I/O Phím Bấm & LED Chỉ Báo ([pin_out.cst](file:///e:/Git_SHA256_src/FPGA_VERILOG_PROJECT/sha256_implement/src/pin_out.cst))
