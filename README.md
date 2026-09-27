@@ -419,12 +419,70 @@ stateDiagram-v2
     ST_SEND --> ST_IDLE: Đã gửi xong 32 Bytes (tx_cnt == 32)
 ```
 
-### 7.3. Giao Thức Giao Tiếp UART (Baudrate 115200 @ 27MHz)
-- Tần số xung nhịp: $F_{\text{clk}} = 27\,000\,000\text{ Hz}$.
-- Tốc độ truyền (Baudrate): $B = 115\,200\text{ bps}$.
-- Hệ số chia xung (Clock Divider):
-  $$\text{CLKS\_PER\_BIT}$$ = $$\left\lfloor \frac{27\,000\,000}{115\,200} \right\rceil = 234\text{ chu kỳ xung nhịp / 1 bit UART}$$
-- Sai số tần số thực tế: $\Delta = \left|\frac{27\,000\,000 / 234 - 115\,200}{115\,200}\right| \approx 0.16\%$ (nằm trong dung sai cho phép $< 2\%$ của chuẩn UART).
+### 7.3. Giao thức giao tiếp UART (Baudrate 115200 @ 27 MHz)
+
+- **Tần số xung nhịp hệ thống:**
+  $$
+  F_{\text{clk}} = 27\,000\,000\text{ Hz}
+  $$
+
+- **Tốc độ truyền UART:**
+  $$
+  B = 115\,200\text{ bps}
+  $$
+
+- **Số chu kỳ xung nhịp trên mỗi bit UART:**
+
+  $$
+  \text{CLKS\_PER\_BIT}
+  =
+  \operatorname{round}
+  \left(
+  \frac{F_{\text{clk}}}{B}
+  \right)
+  =
+  \operatorname{round}
+  \left(
+  \frac{27\,000\,000}{115\,200}
+  \right)
+  = 234
+  \text{ chu kỳ/bit}
+  $$
+
+- **Baudrate thực tế:**
+
+  Với `CLKS_PER_BIT = 234`:
+
+  $$
+  B_{\text{actual}}
+  =
+  \frac{27\,000\,000}{234}
+  \approx 115\,384.62\text{ bps}
+  $$
+
+- **Sai số baudrate:**
+
+  $$
+  \Delta
+  =
+  \left|
+  \frac{B_{\text{actual}}-B}{B}
+  \right|
+  \times 100\%
+  $$
+
+  $$
+  =
+  \left|
+  \frac{115\,384.62-115\,200}{115\,200}
+  \right|
+  \times 100\%
+  \approx 0.16\%
+  $$
+
+- **Kết luận:**
+
+  UART sử dụng **234 chu kỳ clock cho mỗi bit**, tương ứng với baudrate thực tế khoảng **115.385 kbps**. Sai số so với baudrate danh định **115200 bps** chỉ khoảng **0.16%**, phù hợp cho giao tiếp UART trong cấu hình thiết kế.
 
 ### 7.4. Sơ Đồ Gán Chân I/O Phím Bấm & LED Chỉ Báo ([pin_out.cst](file:///e:/Git_SHA256_src/FPGA_VERILOG_PROJECT/sha256_implement/src/pin_out.cst))
 
