@@ -482,15 +482,3 @@ $$\text{Thời Gian Tính Băm 1 Block} = \frac{113\text{ chu kỳ}}{27\text{ MH
 $$\text{Băng Thông Băm (Hash Throughput)} = \frac{512\text{ bits}}{4.185 \times 10^{-6}\text{ s}} \approx 122.34\text{ Mbps (Megabits per second)}$$
 
 *Khi nâng cấp tần số xung nhịp lên $100\text{ MHz}$ (dùng PLL nội của FPGA Gowin), thông lượng xử lý đạt tới **$453.1\text{ Mbps}$**.*
-
----
-
-## 10. Kết Luận & Hướng Phát Triển
-
-Dự án đã xây dựng thành công bộ tăng tốc phần cứng cho thuật toán **SHA-256** trên FPGA Gowin GW2A-18C:
-- **Độ chính xác tuyệt đối**: Vượt qua 100% các bài kiểm tra vector mẫu của NIST FIPS 180-4.
-- **Tối ưu kiến trúc vượt bậc**: Phiên bản Ver2 giảm thời gian xử lý xuống còn 113 clock cycles, loại bỏ hoàn toàn sự phụ thuộc vào file nhớ bên ngoài.
-- **Tính thực tiễn cao**: Tích hợp sẵn bộ giao tiếp UART và mạch chống nhiễu nguồn POR, sẵn sàng tích hợp vào các hệ sinh thái lớn hơn như **Bộ Đào Tiền Số Bitcoin (Bitcoin Miner)**, **Bộ Xác Thực Chữ Ký Điện Tử (HMAC/Digital Signature Engine)**, hoặc **Bộ Tăng Tốc TLS/SSL Security**.
-
----
-*Tác giả: Dự Án FPGA Verilog SHA-256 Hardware Accelerator - 2026*
