@@ -421,7 +421,7 @@ stateDiagram-v2
 ### 7.3. Giao Thức Giao Tiếp UART (Baudrate 115200 @ 27MHz)
 - Tần số xung nhịp: $F_{\text{clk}} = 27\,000\,000\text{ Hz}$.
 - Tốc độ truyền (Baudrate): $B = 115\,200\text{ bps}$.
-- Hệ số chia xung (Clock Divider): $\text{CLKS\_PER\_BIT} = \left\lfloor \frac{27\,000\,000}{115\,200} + \frac{1}{2} \right\rfloor = 234\text{ chu kỳ xung nhịp / 1 bit UART}$.
+- Hệ số chia xung (Clock Divider): $\mathrm{CLKS\_PER\_BIT} = \left\lfloor \frac{27,000,000}{115,200} + \frac{1}{2} \right\rfloor = 234\text{ chu kỳ xung nhịp / 1 bit UART}$.
 - Baudrate thực tế: $B_{\text{actual}} = \frac{27\,000\,000}{234} \approx 115\,384.62\text{ bps}$.
 - Sai số baudrate: $\Delta = \left|\frac{115\,384.62 - 115\,200}{115\,200}\right|\times100\% \approx 0.16\%$.
 
