@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Module name="top" Register="1390" Alu="15" Lut="526" T_Register="4037(1390)" T_Alu="713(15)" T_Lut="6287(526)">
+ <SubModule name="u_uart" T_Register="70(0)" T_Lut="108(0)">
+  <SubModule name="u_uart_rx" Register="40" Lut="58" T_Register="40(40)" T_Lut="58(58)"/>
+  <SubModule name="u_uart_tx" Register="30" Lut="50" T_Register="30(30)" T_Lut="50(50)"/>
+ </SubModule>
+ <SubModule name="u_sha256" Register="2577" Alu="698" Lut="5653" T_Register="2577(2577)" T_Alu="698(698)" T_Lut="5653(5653)"/>
+</Module>

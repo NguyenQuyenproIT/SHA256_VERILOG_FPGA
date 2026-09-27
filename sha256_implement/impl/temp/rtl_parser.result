@@ -1,0 +1,54 @@
+[
+ {
+  "InstFile" : "E:/Git_SHA256_src/FPGA_VERILOG_PROJECT/sha256_on_kit/src/sha256_k_rom.v",
+  "InstLine" : 3,
+  "InstName" : "sha256_k_rom",
+  "ModuleFile" : "E:/Git_SHA256_src/FPGA_VERILOG_PROJECT/sha256_on_kit/src/sha256_k_rom.v",
+  "ModuleLine" : 3,
+  "ModuleName" : "sha256_k_rom"
+ },
+ {
+  "InstFile" : "E:/Git_SHA256_src/FPGA_VERILOG_PROJECT/sha256_on_kit/src/top.v",
+  "InstLine" : 11,
+  "InstName" : "top",
+  "ModuleFile" : "E:/Git_SHA256_src/FPGA_VERILOG_PROJECT/sha256_on_kit/src/top.v",
+  "ModuleLine" : 11,
+  "ModuleName" : "top",
+  "SubInsts" : [
+   {
+    "InstFile" : "E:/Git_SHA256_src/FPGA_VERILOG_PROJECT/sha256_on_kit/src/top.v",
+    "InstLine" : 53,
+    "InstName" : "u_uart",
+    "ModuleFile" : "E:/Git_SHA256_src/FPGA_VERILOG_PROJECT/sha256_on_kit/src/uart_top.v",
+    "ModuleLine" : 7,
+    "ModuleName" : "uart_top",
+    "SubInsts" : [
+     {
+      "InstFile" : "E:/Git_SHA256_src/FPGA_VERILOG_PROJECT/sha256_on_kit/src/uart_top.v",
+      "InstLine" : 31,
+      "InstName" : "u_uart_rx",
+      "ModuleFile" : "E:/Git_SHA256_src/FPGA_VERILOG_PROJECT/sha256_on_kit/src/uart_rx.v",
+      "ModuleLine" : 7,
+      "ModuleName" : "uart_rx"
+     },
+     {
+      "InstFile" : "E:/Git_SHA256_src/FPGA_VERILOG_PROJECT/sha256_on_kit/src/uart_top.v",
+      "InstLine" : 42,
+      "InstName" : "u_uart_tx",
+      "ModuleFile" : "E:/Git_SHA256_src/FPGA_VERILOG_PROJECT/sha256_on_kit/src/uart_tx.v",
+      "ModuleLine" : 7,
+      "ModuleName" : "uart_tx"
+     }
+    ]
+   },
+   {
+    "InstFile" : "E:/Git_SHA256_src/FPGA_VERILOG_PROJECT/sha256_on_kit/src/top.v",
+    "InstLine" : 73,
+    "InstName" : "u_sha256",
+    "ModuleFile" : "E:/Git_SHA256_src/FPGA_VERILOG_PROJECT/sha256_on_kit/src/sha256_core.v",
+    "ModuleLine" : 10,
+    "ModuleName" : "sha256_core"
+   }
+  ]
+ }
+]

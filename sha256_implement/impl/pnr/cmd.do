@@ -1,0 +1,17 @@
+-d E:\Git_SHA256_src\FPGA_VERILOG_PROJECT\sha256_on_kit\impl\gwsynthesis\sha256_on_kit.vg
+-p GW2A-18C-QFN88-8
+-pn GW2A-LV18QN88C8/I7
+-cst E:\Git_SHA256_src\FPGA_VERILOG_PROJECT\sha256_on_kit\src\pin_out.cst
+-cfg E:\Git_SHA256_src\FPGA_VERILOG_PROJECT\sha256_on_kit\impl\pnr\device.cfg
+-bit
+-tr
+-ph
+-timing
+-cst_error
+-convert_sdp32_36_to_sdp16_18
+-place_option 0
+-route_option 0
+-clock_route_order 0
+-correct_hold 1
+-route_maxfan 23
+-global_freq 100.000

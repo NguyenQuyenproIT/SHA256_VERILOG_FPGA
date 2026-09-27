@@ -37,10 +37,10 @@ module sha256_core(
 			   LOAD_H_SET      = 4'd1,   // load a-h ban dau
 			   LOAD_H_CAPTURE  = 4'd2,
 			   LOAD_H_DONE     = 4'd3,
-			   LOAD_W0         = 4'd4,   // load 16 word dau v√†o
-			   EXPAND_CALC     = 4'd5,   // t√≠nh W[t] t?m
-			   EXPAND_W        = 4'd6,   // ghi W[t] v√†o register
-			   //COMPRESS_CALC   = 3'd5,   // t√≠nh T1, T2, a_next ‚Ä¶ h_next
+			   LOAD_W0         = 4'd4,   // load 16 word dau v‡o
+			   EXPAND_CALC     = 4'd5,   // tÌnh W[t] t?m
+			   EXPAND_W        = 4'd6,   // ghi W[t] v‡o register
+			   //COMPRESS_CALC   = 3'd5,   // tÌnh T1, T2, a_next Ö h_next
 			   COMPRESS_CALC_1  = 4'd7,
 			   COMPRESS_CALC_2_WAIT = 4'd8,
 			   COMPRESS_CALC_2  = 4'd9,
