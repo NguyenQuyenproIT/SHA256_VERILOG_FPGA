@@ -290,10 +290,10 @@ Output: dout[31:0]
 
 **Nội Dung**: 64 giá trị K từ K[0] đến K[63]
 ```
-K[0]  = 0x428a2f98    (căn bậc hai của số nguyên tố thứ 1)
-K[1]  = 0x71374491    (căn bậc hai của số nguyên tố thứ 2)
+K[0]  = 0x428a2f98    (căn bậc ba của số nguyên tố thứ 1)
+K[1]  = 0x71374491    (căn bậc ba của số nguyên tố thứ 2)
 ...
-K[63] = 0x1f83d9ab    (căn bậc hai của số nguyên tố thứ 64)
+K[63] = 0x1f83d9ab    (căn bậc ba của số nguyên tố thứ 64)
 ```
 
 #### 3. **rom_H Module**
@@ -327,15 +327,15 @@ H[7] = 0x5be0cd19
 
 ##### a) `hang_so_tron_K.mem`
 - **Định Nghĩa**: Round constant K values cho SHA-256
-- **Ý Nghĩa**: Được tính từ phần lẻ của căn bậc hai của các số nguyên tố
-- **Giá Trị**: 64 từ hex 32-bit
+- **Ý Nghĩa**: Được tính từ phần thập phân sau khi căn bậc 3 của 64 số nguyên tố đầu tiên
+- **Giá Trị**: 64 word hex 32-bit
 - **Phạm Vi**: K[0] = 428a2f98 đến K[63] = 1f83d9ab
 - **Mục Đích**: Tăng tính không tuyến tính của thuật toán
 
 ##### b) `initial_hash_values.mem`
 - **Định Nghĩa**: Initial hash values (H₀ đến H₇)
 - **Ý Nghĩa**: Giá trị khởi tạo ban đầu cho mỗi lần xử lý
-- **Giá Trị**: 8 từ hex 32-bit
+- **Giá Trị**: 8 word hex 32-bit
 - **Phạm Vi**: H[0] = 6a09e667 đến H[7] = 5be0cd19
 - **Mục Đích**: Điểm bắt đầu chuẩn cho tất cả SHA-256 computations
 
@@ -904,10 +904,4 @@ H[4] = 0x510e527f, H[5] = 0x9b05688c, H[6] = 0x1f83d9ab, H[7] = 0x5be0cd19
 3. **Input Format**: block_in[511:0] được sắp xếp theo big-endian
 4. **Output Format**: hash_out[255:0] = [H_reg[0]][H_reg[1]]...[H_reg[7]]
 5. **Reset**: Active High (rst = 1 để reset)
-
----
-
-**Phiên bản**: 1.0  
-**Cập nhật**: Tháng 5, 2026  
-**Tác giả**: FPGA SHA256 Development Team
 
